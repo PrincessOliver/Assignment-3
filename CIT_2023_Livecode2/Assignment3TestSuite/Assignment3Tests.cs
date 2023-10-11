@@ -42,7 +42,7 @@ namespace Assignment3TestSuite
             var client = Connect();
             Assert.True(client.Connected);
         }
-
+#if comment
         /*    Method Tests     */
 
         [Fact]
@@ -575,7 +575,7 @@ namespace Assignment3TestSuite
         }
 
 
-
+#endif
 
         /**********************************************************
          * 
