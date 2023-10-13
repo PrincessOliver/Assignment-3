@@ -20,5 +20,3 @@ var rcnt = stream.Read(buffer);
 Console.WriteLine(Encoding.UTF8.GetString(buffer, 0, rcnt));
 
 client.Close();
-
-

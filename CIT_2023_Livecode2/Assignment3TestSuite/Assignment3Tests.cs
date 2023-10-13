@@ -42,7 +42,7 @@ namespace Assignment3TestSuite
             var client = Connect();
             Assert.True(client.Connected);
         }
-#if comment
+
         /*    Method Tests     */
 
         [Fact]
@@ -54,8 +54,9 @@ namespace Assignment3TestSuite
 
             var response = client.ReadResponse();
 
-            Assert.Contains("missing method", response.Status.ToLower());
+            Assert.Contains("missing method",response.Status.ToLower());
         }
+
 
         [Fact]
         public void Constraint_RequestWithUnknownMethod_IllegalMethodError()
@@ -75,7 +76,7 @@ namespace Assignment3TestSuite
 
             Assert.Contains("illegal method", response.Status.ToLower());
         }
-
+#if comment
 
         [Theory]
         [InlineData("create")]
