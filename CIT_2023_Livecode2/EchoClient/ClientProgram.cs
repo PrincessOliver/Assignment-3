@@ -1,4 +1,5 @@
 ﻿using Assignment3TestSuite;
+using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -16,10 +17,9 @@ var stream = client.GetStream();
 
 var request = new
 {
-    Method = "update",
-    Path = "testing",
-    Date = DateTimeOffset.Now.ToString(),
-    Body = (new { cid = 1, Name = "Beverages" }).ToJson()
+    Method = "read",
+    Path = "/api/categories",
+    Date = DateTimeOffset.Now.ToUnixTimeSeconds().ToString()
 };
 
 var requestJsonStr = JsonSerializer.Serialize(request);

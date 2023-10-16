@@ -54,7 +54,7 @@ namespace Assignment3TestSuite
 
             var response = client.ReadResponse();
 
-            Assert.Contains("missing method", response.Status.ToLower());
+            Assert.Contains("4 missing method", response.Status.ToLower());
         }
 
         [Fact]
